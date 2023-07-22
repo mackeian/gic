@@ -1,7 +1,7 @@
 # GIC - Gmail Inbox Control
 ## Purpose of the app
 
-The purpose of this web app, is to **only let email senders you have explicitly approved, end up in your Gmail Inbox**. All other email senders ends up in a Screening (label) in Gmail, which you can screen at a time that suits you, and then approve or decline new senders. It puts you in control of your Inbox. Or as Basecamp call it, your Imbox (Important Inbox). This Google Scripts app was created by myself since I was receiving a lot of irrelevant emails to my professional inbox, and that made it hard for me to stay on top of the relevant emails at work.
+The purpose of this web app, is to **only let email senders you have explicitly approved, end up in your Gmail Inbox**. All other email senders ends up in a Screening (label) in Gmail, which you can screen at a time that suits you, and then approve or decline new senders. It puts you in control of your Inbox. Or as Basecamp call it, your Imbox (Important Inbox). This Google Scripts app was created by myself since I was receiving a lot of irrelevant emails to my professional inbox, and that made it hard for me to stay on top of the relevant emails at work. I wanted a simple solution in Gmail.
 
 **Note:** This script does _never_ delete any emails, it just move emails from your inbox and uses labels to filter allowed, disallowed and unknown senders. The script runs only within your google account, there are no servers etc. No data or information is shared outside your own account. The source code is provided on this page.
 However: Due to lack of granularity in the Gmail & App authorization scopes, it does unfortunately not work with less priviledges than asked for.
