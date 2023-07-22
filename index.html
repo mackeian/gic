@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body class="content" style="padding: 1em;">
+    <h1>GIC - Gmail Inbox Control</h1>
+    <p>Author: Marcus Erlandsson. Source code: https://github.com/mackeian/gic/</p>
+
+    <h2>How do I use it?</h2>
+    <a href="https://github.com/mackeian/gic/" target="_blank">View manual on github</a>
+    
+    <h2>Installation checks</h2>
+    <p>✅ = OK, ❌ = Failure</p>
+    <ul>
+      <li><? if (data.database_url) { ?>✅<? } else { ?>❌<? } ?> Spreadsheet database: <? if (data.database_url) { ?><a href="<?= data.database_url ?>" target="_blank">link</a><? } ?></li>
+      <li>Labels:
+        <ul>
+          <li>
+        <? if (data.label_allowed) { ?>✅<? } else {?>❌<? } ?> Allowed label (all emails that are allowed to your inbox) 
+          </li>
+          <li>
+        <? if (data.label_disallowed) { ?>✅<? } else {?>❌<? } ?> Disallowed label (all emails that are explicitly disallowed to enter your inbox) 
+          </li>
+          <li>
+        <? if (data.label_screen) { ?>✅<? } else {?>❌<? } ?> Screen label (all unknown email senders, for screening) 
+          </li>
+        </ul>
+      </li>
+      <li>Triggers (<a href="https://script.google.com/home/triggers" target="_blank">All your triggers</a>)
+        <ul>
+          <li>
+            <? if (data.trigger_allowed) { ?>✅<? } else {?>❌<? } ?> Trigger for allowed labels
+          </li>
+          <li>
+              <? if (data.trigger_disallowed) { ?>✅<? } else {?>❌<? } ?> Trigger for disallowed labels
+          </li>
+          <li>
+              <? if (data.trigger_move) { ?>✅<? } else {?>❌<? } ?> Trigger for moving emails
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 class="subtitle">Manually running tasks (only needed for testing)</h3>
+    <button class="button" onclick="google.script.run.updated_allowed_senders_from_labelled_threads();">Update ✔ allowed senders, from labelled emails</button>
+    <button class="button" onclick="google.script.run.updated_disallowed_senders_from_labelled_threads();">Update 🚫 disallowed senders, from labelled emails</button>
+    <button class="button" onclick="google.script.run.move_unknown_and_disallowed_senders_from_inbox();">Move ? unknown and 🚫 disallowed senders from Inbox</button>
+    
+  </body>
+</html>
