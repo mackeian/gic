@@ -61,7 +61,7 @@ The list is stored in the Database Spreadsheet, which is created once you load t
 
 ### Option 1: Install by URL
 
-* Go to the Web app page: https://script.google.com/macros/s/AKfycbwky7qxPFSVZM0bSkDGHZk4Vq2IdRWR91jVvQwdz1oNXl6U8oD2i0rseUxeYzyQQPzAMA/exec
+* Go to the Web app page: [https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec](https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec)
 * Approve the scopes and install the app
 * After successfully approved, the web app page will show the installation status and you are ready to go!
 
