@@ -26,13 +26,11 @@ It's implemented as a Google Web App, on top of Gmail & Google Spreadsheet. Insp
 
 ![Allow](https://github.com/mackeian/gic/assets/789341/e7aaad87-376f-4902-9df5-feeefff4fa6c)
 
-<em>Optionally: You can also select "Move to: Inbox" if you want to look at this email.</em>
-
 ### Disallow a sender
 1. Go to *"--Screen"* label
 2. Select one or multiple emails
 3. Add the label *"--Disallow"* to the selected emails
-4. From now on, the senders will **not** end up in your Inbox, but be archived directly once received.
+4. From now on, the senders will **not** end up in your Inbox or Screen, but be archived directly once received.
 
 ### Technically: How does it work ?
 * **Allow & Disallow**
@@ -59,17 +57,19 @@ The list is stored in the Database Spreadsheet, which is created once you load t
 
 ## How do I install it?
 
-### Option 1: Install by URL
 
-* Go to the Web app page: [https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec](https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec)
-* Approve the scopes and install the app
-* After successfully approved, the web app page will show the installation status and you are ready to go!
 
-### Option 2: Install manually
+### Option 1: Install manually
 * Create a Google App script on your own in your organisation (https://script.google.com/home)
 * Create a new project, and paste the code from this repo (Code.js and index.html).
 * Then run the app, by creating a deployment of it ([Deployments doc](https://developers.google.com/apps-script/concepts/deployments))
 * Lastly: Go to the web app url (visible in the Deployment option in Google Scripts) - that will initialise all functionality.
+
+### Option 2: Install by URL
+* Go to the Web app page: [https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec](https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec)
+* Approve the scopes and install the app
+* After successfully approved, the web app page will show the installation status and you are ready to go!
+
 
 ## Troubleshooting
 ### Installation checks
