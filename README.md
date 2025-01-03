@@ -46,15 +46,6 @@ It's implemented as a Google Web App, on top of Gmail & Google Spreadsheet. Insp
 * You can change the timing of the triggers in https://script.google.com/home/triggers
 * This script does _never_ delete any emails, it just move emails from your inbox and uses labels to filter allowed, disallowed and unknown senders. The script runs only within your google account, there are no servers etc. No data or information is shared outside your own account. The source code is provided on this page. <i>However</i> due to lack of granularity in the Gmail & App authorization scopes, the script does  not work with less priviledges than the ones asked for.
 
-### Starting tips - The Database
-To get started, it can be good to add your organisations email domain (and close collaborator organisations domains) to Allowed senders directly, to save some time in screening emails. You can do that by adding a row in the Allowed senders sheet of the Database spreadsheet, with the content "@yourdomain.com" (see image below). Then all email senders from that domain will be allowed, and come directly to your inbox. It works the same for the Disallowed senders tab.
-
-The list is stored in the Database Spreadsheet, which is created once you load the Setup page, and is found here:
-* Link on the Setup page of this web app, or
-* Search on https://drive.google.com/drive/ for "GIC - Gmail Inbox Control".
-
-* ![image](https://github.com/mackeian/gic/assets/789341/76370c56-875b-49cc-9485-39fd7d73b1b7)
-
 ## How do I install it?
 
 
@@ -70,10 +61,30 @@ The list is stored in the Database Spreadsheet, which is created once you load t
 * Approve the scopes and install the app
 * After successfully approved, the web app page will show the installation status and you are ready to go!
 
+## Starting tips
 
+### The Database
+To get started, it can be good to add your organisations email domain (and close collaborator organisations domains) to Allowed senders directly, to save some time in screening emails. You can do that by adding a row in the Allowed senders sheet of the Database spreadsheet, with the content "@yourdomain.com" (see image below). Then all email senders from that domain will be allowed, and come directly to your inbox. It works the same for the Disallowed senders tab.
+
+The list is stored in the Database Spreadsheet, which is created once you load the Setup page, and is found here:
+* Link on the Setup page of this web app, or
+* Search on https://drive.google.com/drive/ for "GIC - Gmail Inbox Control".
+
+* ![image](https://github.com/mackeian/gic/assets/789341/76370c56-875b-49cc-9485-39fd7d73b1b7)
 ## Troubleshooting
 ### Installation checks
 Have a look at the setup page of the web app, as it automatically tries to create all labels, triggers and the database spreadsheet when it loads (if they do not already exist), and also shows the status of them.
+
+**How to find the setup page:**
+* Go to your Google Scripts (https://script.google.com/home?pli=1)
+* Click on the GIC - Gmail Inbox Control
+* Go to Deployments (Top right) - Manage Deployments
+* Under **Web App Url**, you can see the link to the setup page.
+
+![Screenshot 2025-01-03 at 15 15 18](https://github.com/user-attachments/assets/cd7bedd8-b5c4-4bc3-aaac-a8712386dd40)
+
+
+**The setup page:**
 ![Screenshot 2023-07-22 at 10 06 28](https://github.com/mackeian/gic/assets/789341/6c4f98ac-233b-4853-900a-7ddc711abbe4)
 
 
