@@ -22,7 +22,9 @@ It's implemented as a Google Web App, on top of Gmail & Google Spreadsheet. Insp
 1. Go to *"--Screen"* label
 1. Select one or multiple emails
 1. Add the label *"--Allow"* to the selected emails
-1. From now on, the senders will end up in your Inbox directly, and not go to screening.
+1. *(The marked email's will soon be removed from the screening label automatically.)*
+1. **From now on:** the senders will end up in your Inbox directly, and not go to screening.
+
 
 ![Allow](https://github.com/mackeian/gic/assets/789341/e7aaad87-376f-4902-9df5-feeefff4fa6c)
 
@@ -30,7 +32,8 @@ It's implemented as a Google Web App, on top of Gmail & Google Spreadsheet. Insp
 1. Go to *"--Screen"* label
 2. Select one or multiple emails
 3. Add the label *"--Disallow"* to the selected emails
-4. From now on, the senders will **not** end up in your Inbox or Screen, but be archived directly once received.
+1. *(The marked email's will soon be removed from the screening label automatically.)*
+5. **From now on:** the senders will **not** end up in your Inbox or Screen, but be archived directly once received.
 
 ### Technically: How does it work ?
 * **Allow & Disallow**
@@ -57,7 +60,7 @@ It's implemented as a Google Web App, on top of Gmail & Google Spreadsheet. Insp
 * Lastly: Go to the web app url (visible in the Deployment option in Google Scripts) - that will initialise all functionality.
 
 ### Option 2: Install by URL
-* Go to the Web app page: [https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec](https://script.google.com/macros/s/AKfycbxGxFArrXfet9RO5-oKgosFcFnVCXw673ZVwvl8pIX9btAMnlgTWmYj-Og85Bz7nXERyg/exec)
+* Go to the Web app page: [https://script.google.com/macros/s/AKfycbxo94OmzTiP9IXIPSbv4iaT8fmpOdYGH0ksh4DhyfeXSAmngwys7sJvS7D1tNn3Yree6Q/exec](https://script.google.com/macros/s/AKfycbxo94OmzTiP9IXIPSbv4iaT8fmpOdYGH0ksh4DhyfeXSAmngwys7sJvS7D1tNn3Yree6Q/exec)
 * Approve the scopes and install the app
 * After successfully approved, the web app page will show the installation status and you are ready to go!
 
