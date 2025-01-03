@@ -191,6 +191,7 @@ function updated_disallowed_senders_from_labelled_threads() {
 
     add_sender_of_thread_to_disallowed_senders(thread);
     remove_disallowed_sender_label_from_thread_sender(thread);
+    remove_screening_label_from_thread_sender(thread);
   }
   
   function add_sender_to_disallowed_senders(sender) {
@@ -221,6 +222,10 @@ function updated_disallowed_senders_from_labelled_threads() {
   
   function remove_disallowed_sender_label_from_thread_sender(thread) {
     DISALLOWED_LABEL.removeFromThread(thread);
+  }
+
+  function remove_screening_label_from_thread_sender(thread) {
+    SCREENING_LABEL.removeFromThread(thread);
   }
 }
 
@@ -304,7 +309,6 @@ function _getDatabaseSpreadsheet() {
   if (!DATABASE_SPREADSHEET_URL) {
     throw new Error("No database spreadsheet url found in Script Properties, make sure you've run the init() command that sets up all configurations.");
   }
-  Sheets
   return SpreadsheetApp.openByUrl(DATABASE_SPREADSHEET_URL);
 }
 
@@ -338,3 +342,8 @@ function _getAllTriggerFunctionNames() {
     }
     return allTriggerHandleFunctionNames;
   }
+
+function _manuallySetSpreadsheetUrl() {
+    var props = PropertiesService.getUserProperties();
+    DATABASE_SPREADSHEET_URL = props.setProperty(DATABASE_SPREADSHEEET_PROPERTY_NAME, "https://docs.google.com/spreadsheets/d/1U4-dnwVeiV8lC_K1BDVITx65jaG-m0NBthTuIXNM8kA/edit");
+}
